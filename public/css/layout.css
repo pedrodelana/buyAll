@@ -1,0 +1,104 @@
+*
+{
+    margin: 0px;
+    padding: 0px;
+}
+
+html
+{
+    height: 100%;
+    min-height: 100%;
+}
+
+body
+{
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.logo-b
+{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.logo-b img
+{
+    height: 100%;
+    width: 200px;
+}
+
+.menu
+{
+    height: 50px;
+    width: 100%;
+}
+
+.content
+{
+    height: calc(100vh - 200px);
+    width: 80%;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 1em gray;
+}
+
+.products .product img
+{
+    height: 130px;
+    border-radius: 70%;
+}
+
+.product
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+    box-shadow: 0 0 1em gray;
+    margin: 5px;
+}
+
+.prod-inf
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.products h1
+{
+    font-size: 20px;
+}
+.products h2
+{
+    font-size: 10px;
+}
+.products p
+{
+    font-size: 10px;
+}
+
+.rights
+{
+    height: 50px;
+    margin-top: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(229, 226, 226, 0.897);
+}
+
+.general
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
