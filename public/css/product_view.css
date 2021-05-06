@@ -1,0 +1,34 @@
+.product-view
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    width: 50vh;
+    height: 60vh;
+    text-align: center;
+    box-shadow: 0 0 1em gray;
+}
+
+.buttons
+{
+    margin-top: 20px;
+}
+
+.product-view img
+{
+    border-radius: 25px;
+}
+
+.product-view h1
+{
+    font-weight: bolder;
+}
+
+.content
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

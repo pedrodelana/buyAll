@@ -2,19 +2,27 @@
 {
     margin: 0px;
     padding: 0px;
+    font-family: 'Oswald', sans-serif;
+    box-sizing: border-box;
 }
 
-html
+
+html, body
 {
     height: 100%;
-    min-height: 100%;
-}
-
-body
-{
     display: flex;
     flex-direction: column;
-    min-height: 100%;
+
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+header
+{
+    z-index:9;
 }
 
 .logo-b
@@ -37,68 +45,60 @@ body
 {
     height: 50px;
     width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    align-content: flex-end;
+}
+
+.user-status
+{
+    float: right;
+
+    width: 100%;
+
+}
+
+.menu button
+{
+    margin-left: 10px;
+    color: white;
+    font-weight: bolder;
+}
+
+.general
+{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 100%;
 }
 
 .content
 {
-    height: calc(100vh - 200px);
     width: 80%;
     padding: 20px;
     background-color: white;
     box-shadow: 0 0 1em gray;
+
 }
 
-.products .product img
+.content .voltar img
 {
-    height: 130px;
-    border-radius: 70%;
-}
-
-.product
-{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 10px;
-    box-shadow: 0 0 1em gray;
-    margin: 5px;
-}
-
-.prod-inf
-{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.products h1
-{
-    font-size: 20px;
-}
-.products h2
-{
-    font-size: 10px;
-}
-.products p
-{
-    font-size: 10px;
+    height: 30px;
+    width: 40px;
 }
 
 .rights
 {
     height: 50px;
-    margin-top: auto;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: rgba(229, 226, 226, 0.897);
+    bottom: 0px;
 }
 
-.general
-{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-}
+

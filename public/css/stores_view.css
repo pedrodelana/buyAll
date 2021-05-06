@@ -1,0 +1,38 @@
+.stores .store img
+{
+    height: 13vh;
+    width: 13vh;
+    border-radius: 70%;
+}
+
+.store
+{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+    box-shadow: 0 0 1em gray;
+    margin: 5px;
+}
+
+.store-inf
+{
+    margin-left: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stores h1
+{
+    font-size: 20px;
+}
+.stores h2
+{
+    font-size: 10px;
+}
+.stores p
+{
+    font-size: 10px;
+}

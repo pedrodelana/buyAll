@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ProductsController;
+use App\Http\Controllers\StoreController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +15,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/products/{id_store}/{id_product}', [ProductsController::class, 'show']);
+Route::get('/store/{id}', [StoreController::class, 'show']);
+Route::get('/products', [ProductsController::class, 'index']);
+Route::get('/search_store', [StoreController::class, 'index']);
+
 Route::get('/', function () {
-    return view('layout/layout');
+    return view('site/search_store');
 });
+

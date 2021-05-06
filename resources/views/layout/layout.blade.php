@@ -7,70 +7,40 @@
     <title>Venda de produtos</title>
 </head>
 <body>
-
     <header>
         <div class="logo-b">
-            <a href="/">
-                <img src="img/buyall_logo_simple_transp.png" class="logo-img" alt="">
+            <a href="/search_store">
+                <img src="{{ asset('/img/buyall_logo_simple_transp.png') }}" class="logo-img" alt="">
             </a>
         </div>
-        <div class="menu bg-primary">
+
+        <div class="menu bg-secondary">
+
+
+
+            <div class="user-status">
+                @auth
+                    <p> {{Auth::user()->name}} </p>
+                @endauth
+                @guest
+                    <a href="register">Registrar-se</a>
+                    <a href="login">Login</a>
+                @endguest
+            </div>
+
         </div>
+
     </header>
     <div class="general">
         <div class="content">
-            <div class="products container-fluid">
-                <div class="row ">
-                    <div class="product col-md-3 ">
-                        <img src="img/mulheres.jpg" alt="">
-                        <div class="prod-inf">
-                        <h1>Nome da loja</h1>
-                        <h2>Tipo da loja</h2>
-                        <p>Vendedor</p>
-                        </div>
-                    </div>
-
-                    <div class="product col-md-3">
-                        <img src="img/platao.jpg" alt="">
-                        <div class="prod-inf">
-                        <h1>Nome da loja</h1>
-                        <h2>Tipo da loja</h2>
-                        <p>Vendedor</p>
-                        </div>
-                    </div>
-
-                    <div class="product col-md-3">
-                        <img src="img/poder.jpg" alt="">
-                        <div class="prod-inf">
-                        <h1>Nome da loja</h1>
-                        <h2>Tipo da loja</h2>
-                        <p>Vendedor</p>
-                        </div>
-                    </div>
-                    <div class="product col-md-3">
-                        <img src="img/poder.jpg" alt="">
-                        <div class="prod-inf">
-                        <h1>Nome da loja</h1>
-                        <h2>Tipo da loja</h2>
-                        <p>Vendedor</p>
-                        </div>
-                    </div>
-                    <div class="product col-md-3">
-                        <img src="img/poder.jpg" alt="">
-                        <div class="prod-inf">
-                        <h1>Nome da loja</h1>
-                        <h2>Tipo da loja</h2>
-                        <p>Vendedor</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <button class="btn voltar" onClick="history.go(-1)">
+                <img src="/img/seta.png" alt="">
+            </button>
+            @yield('content')
         </div>
     </div>
-    <footer>
-        <div class="rights">
-            <p>Todos os direitos reservados a Pedro Lana</p>
-        </div>
+    <footer class="rights">
+            <p>Todos os direitos reservados a Pedro Lana @ {{date('Y')}}</p>
     </footer>
 </body>
 </html>
