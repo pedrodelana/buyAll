@@ -21,10 +21,11 @@
             <div class="user-status">
                 @auth
                     <p> {{Auth::user()->name}} </p>
+                    <p><a href="/logout">Logout</a></p>
                 @endauth
                 @guest
-                    <a href="register">Registrar-se</a>
-                    <a href="login">Login</a>
+                    <p><a href="login">Login</a></p>
+                    <p><a href="register">Registrar-se</a></p>
                 @endguest
             </div>
 
