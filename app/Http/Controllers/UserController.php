@@ -38,4 +38,9 @@ class UserController extends Controller
         Auth::logout();
         return view('auth/login');
     }
+
+    public function profile()
+    {
+        return view('site.user_profile');
+    }
 }

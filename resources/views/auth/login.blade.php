@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="/css/auth_general.css">
 
 @section('content')
-    <div class="container box col-md-4">
+    <div class="container box col-md-3">
         <h3 align="center">Login</h3>
         <br>
         @if ($errors->any())

@@ -19,6 +19,7 @@ class CreateStoresTable extends Migration
             $table->string('description', 200);
             $table->string('type', 20);
             $table->string('image', 355)->nullable();
+            $table->foreignId('user_id')->references('id')->on('users');
             $table->timestamps();
         });
     }
