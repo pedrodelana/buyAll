@@ -20,6 +20,19 @@ class ProductsController extends Controller
 
         return view('/site/product_view', compact('product', 'store'));
     }
+
+    public function store(Request $request)
+    {
+        Products::create($request->all());
+        return redirect()->route('user.profile');
+    }
+
+    public function destroy($id)
+    {
+        $product = Products::findOrFail($id);
+        $product->delete();
+        return redirect()->route('user.profile');
+    }
 }
 
 

@@ -95,6 +95,11 @@ header
     width: 40px;
 }
 
+.content .voltar
+{
+    display: inline-block;
+}
+
 .rights
 {
     height: 50px;

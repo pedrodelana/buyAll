@@ -4,6 +4,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\StoreController;
 use App\Http\Controllers\UserController;
+use App\Models\Products;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,3 +26,5 @@ Route::get('/', [UserController::class, 'login'])->name('login');
 Route::post('/auth', [UserController::class, 'auth'])->name('auth.user');
 Route::get('/logout', [UserController::class, 'logout'])->name('auth.logout');
 Route::get('/profile', [UserController::class, 'profile'])->name('user.profile');
+Route::post('/products/store', [ProductsController::class, 'store'])->name('products.store');
+Route::delete('/products/delete/{id}', [ProductsController::class, 'destroy'])->name('product.destroy');
