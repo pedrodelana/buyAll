@@ -25,6 +25,7 @@ Route::get('/search_store', [StoreController::class, 'index'])->name('stores')->
 Route::get('/', [UserController::class, 'login'])->name('login');
 Route::post('/auth', [UserController::class, 'auth'])->name('auth.user');
 Route::get('/logout', [UserController::class, 'logout'])->name('auth.logout');
-Route::get('/profile', [UserController::class, 'profile'])->name('user.profile');
+Route::get('/profile', [UserController::class, 'profile'])->name('user.profile')->middleware('auth');
 Route::post('/products/store', [ProductsController::class, 'store'])->name('products.store');
 Route::delete('/products/delete/{id}', [ProductsController::class, 'destroy'])->name('product.destroy');
+Route::get('/product/edit/{id}', [ProductsController::class, 'edit'])->name('products.edit');
