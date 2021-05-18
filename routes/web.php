@@ -28,4 +28,5 @@ Route::get('/logout', [UserController::class, 'logout'])->name('auth.logout');
 Route::get('/profile', [UserController::class, 'profile'])->name('user.profile')->middleware('auth');
 Route::post('/products/store', [ProductsController::class, 'store'])->name('products.store');
 Route::delete('/products/delete/{id}', [ProductsController::class, 'destroy'])->name('product.destroy');
-Route::get('/product/edit/{id}', [ProductsController::class, 'edit'])->name('products.edit');
+Route::get('/product/edit/{id}', [ProductsController::class, 'edit'])->name('products.edit')->middleware('auth');
+Route::put('/product/update/{id}', [ProductsController::class, 'update'])->name('product.update');

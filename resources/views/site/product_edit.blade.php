@@ -2,8 +2,10 @@
 <link rel="stylesheet" href="/css/product_edit.css">
 
 @section('content')
-<form action="{{ route('products.store') }}" method="post"  enctype="multipart/form-data" >
+<div class="form-edit">
+<form action="{{ route('product.update', $product->id) }}" method="post"  enctype="multipart/form-data" class="form">
     @csrf
+    @method('put')
     <!-- Cabeçalho do modal -->
     <div >
       <h4 >Adicionar um novo produto</h4>
@@ -51,11 +53,12 @@
         </div>
     </div>
 
+    <br>
     <!-- Rodapé do modal-->
     <div>
-      <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+
       <button type="submit" class="btn btn-primary">Salvar</button>
     </div>
 </form>
-
+</div>
 @endsection

@@ -54,6 +54,27 @@ class ProductsController extends Controller
         return view('site.product_edit', compact('product'));
     }
 
+    public function update(Request $request, $id)
+    {
+        $product = Products::findOrFail($id);
+
+        $data = $request->all();
+
+        if ($request->image)
+        {
+            if (Storage::exists($product->image))
+            {Storage::delete($product->image);}
+
+            $image = $request->file('image')->store('products');
+            $data['image'] = $image;
+        }
+
+
+        $product->update($data);
+
+        return redirect()->route('user.profile');
+    }
+
     public function destroy($id)
     {
         $product = Products::findOrFail($id);

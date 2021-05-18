@@ -12,7 +12,7 @@
     <div class="products container">
         <div class="row">
             @foreach ($products as $product)
-                <div class="product col">
+                <div class="product col-md-3">
                     <img src="{{asset("storage/{$product->image}")}}" alt="">
                     <div class="prod-inf">
                             <h1>{{$product->name}}</h1>
@@ -20,7 +20,7 @@
                         <p>Preço: R$ {{ number_format($product->price, 2) }}</p>
                         <div class="buttons">
                             <button class="btn btn-success">Comprar</button>
-                            <button class="btn btn-primary" onclick="window.location.href='/products/{{$store->id}}/{{$product->id}}'">informação</button>
+                            <a href="{{ route('products.edit', $product->id) }}"><button class="btn btn-primary">Editar</button></a>
                             <form action="{{ route('product.destroy', $product->id) }}" method="post">
                                 @csrf
                                 <input type="hidden" name="_method" value="DELETE">
